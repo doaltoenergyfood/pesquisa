@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css">
+    <title>DoAlto - Questionário</title>
+</head>
+<body>
+    
+    <div class="row">
+      <div class="col-md-12">
+        <form action="https://api.sheetmonkey.io/form/fsNWzLWTeWkNmsnJTzb5KB" method="post">
+          <h1> Do Alto </h1> <br>
+          <h2>Avaliação</h2>
+          <fieldset>
+            
+            <legend><span class="number">1</span> Informações pessoais:</legend>
+          
+            <label for="name">Nome:</label>
+            <input type="text" id="nome" name="Nome Completo" placeholder="Digite seu nome completo" required>
+          
+            <label for="telefone">Telefone:</label>
+            <input type="tel" pattern="\[0-9]{2}\ [9]{1}[0-9]{4}-[0-9]{4}" placeholder="(xx) 9xxxx-xxxx" id="telefone" name="Telefone" required/>
+         
+          </fieldset>
+          
+          <fieldset>  
+          
+            <legend><span class="number">2</span> Questionário:</legend>
+            <p><strong>Responda com calma e atentamente.</strong></p> <br>
+
+
+            <label for="local">Escolha o estabelecimento que esteve presente:</label>
+            <select id="local" name="local" placeholder="Selecione um estabelecimento">
+            
+             <option value="" disabled selected>Selecione um estabelecimento</option>
+             <option value="Alphaville">Alphaville</option>
+             <option value="Ondina">Ondina</option>
+             <option value="Alto do Itaigara">Alto do Itaigara</option>
+            </select><br><br>
+
+            <label for="pessoas_experiencia">Quantas pessoas estavam com você durante a experiência?</label>
+            <input type="radio" name="pessoas_experiencia" id="radio_eu" value="Somente eu" required>Somente eu <br>
+            <input type="radio" name="pessoas_experiencia" id="radio_1-2" value="1-2" required> 1-2 <br>
+            <input type="radio" name="pessoas_experiencia" id="radio_2-5" value="2-5"required> 2-5 <br><br>
+
+            <label for="percentual_ocupacao">Na sua percepção, qual era o percentual de ocupação do restaurante durante seu atendimento?</label>
+
+            <input type="radio" name="percentual_ocupacao" id="radio_0" value="0" required> 0% (Completamente vazio); <br>
+            <input type="radio" name="percentual_ocupacao" id="radio_25" value="25" required> 25% (Parcialmente vazio);
+            <br>
+            <input type="radio" name="percentual_ocupacao" id="radio_50" value="50" required> 50% (Metade das mesas ocupadas); <br>
+            <input type="radio" name="percentual_ocupacao" id="radio_75" value="75" required> 75% (Parcialmente cheio); <br>
+            <input type="radio" name="percentual_ocupacao" id="radio_100" value="100" required> 100% (Completamente cheio). <br><br>
+
+            <label for="setor">Em qual setor você consumiu?</label>
+            <input type="radio" name="setor" id="radio_acai" value="Açai" required> Açai <br>
+            <input type="radio" name="setor" id="radio_japones" value="Japonês" required> Japonês <br>
+            <input type="radio" name="setor" id="radio_lanchonete" value="Lanchonete" required> Lanchonete <br><br>
+
+
+            <label for="recepcao_eficiente">Foi recepcionado com <strong>cordialidade</strong>  e <strong>rapidez</strong> no seu primerio atendimento seguindo padrão do estabelecimento?</label>
+            
+            <input type="radio" name="recepcao_eficiente" id="radio_sim" value="Sim" required> Sim
+            <input type="radio" name="recepcao_eficiente" id="radio_nao" value="Não" required> Não <br><br>
+
+
+            <label for="tempo_espera">Qual foi o tempo de espera na fila (do momento que chegou na fila até começar a fazer o pedido no caixa)?</label>
+            <input type="radio" name="tempo_espera" id="radio_0-2" value="0 a 2" required> 0 a 2 Minutos;<br>
+            <input type="radio" name="tempo_espera" id="radio_2-5" value="2 a 5" required> 2 a 5 Minutos;<br>
+            <input type="radio" name="tempo_espera" id="radio_5-7" value="5 a 7" required> 5 a 7 Minutos;<br>
+            <input type="radio" name="tempo_espera" id="radio_7-10" value="7 a 10" required> 7 a 10 Minutos;<br>
+            <input type="radio" name="tempo_espera" id="radio_10" value=" mais 10" required> Mais de 10 Minutos.<br><br>
+
+
+            <label for="repetiu_pedido">O(a) colaborador(a) repetiu o seu pedido ao ser finalizado?</label>
+            <input type="radio" name="repetiu_pedido" id="radio_sim" value="Sim" required> Sim
+            <input type="radio" name="repetiu_pedido" id="radio_nao" value="Não" required> Não <br><br>
+
+            <label for="abordagem_colaborador">A sua mesa foi mantida limpa e organizada durante toda a experiência?</label>
+            <input type="radio" name="mesa_limpa" id="radio_sim" value="Sim" required> Sim
+            <input type="radio" name="mesa_limpa" id="radio_nao" value="Não" required> Não <br><br>
+
+            <label for="abordagem_colaborador">Você foi abordado por algum(a) colaborador(a) em sua mesa? Ele(a) se apresentou com sorriso no rosto se colocou à disposição para atendê-lo(a)?</label>
+            <input type="radio" name="abordagem_colaborador" id="radio_sim" value="Sim, simpático e atencioso" required> Sim, o colaborador foi simpático e atencioso;<br>
+            <input type="radio" name="abordagem_colaborador" id="radio_simMas" value="Sim, não foi simpático e nem atencioso" required> Sim, mas o colaborador não foi simpático e atencioso;<br>
+            <input type="radio" name="abordagem_colaborador" id="radio_nao" value="Não foi abordado"> Não fui abordado por ninguém;<br>
+            <input type="radio" name="abordagem_colaborador" id="radio_naoAplica" value="Não se aplica (não foi atendido na mesa)" required> Não se aplica (não fui atendido em mesa).<br><br>
+
+
+            <label for="disponibilidade_itens">Todos os itens solicitados estavam disponíveis?</label>
+            <input type="radio" name="disponibilidade_itens" id="radio_sim" value="Sim"required> Sim
+            <input type="radio" name="disponibilidade_itens" id="radio_nao" value="Não"required> Não <br><br>
+
+
+            <label for="prato_retirado">Ao finalizar o consumo, o seu prato foi retirado da mesa em tempo esperado?</label>
+            <input type="radio" name="prato_retirado" id="radio_sim" value="Sim" required> Sim
+            <input type="radio" name="prato_retirado" id="radio_nao" value="Não" required> Não <br><br>
+
+
+            <label for="colaborador_retornou">Algum(a) colaborador(a) retornou a mesa para checar se estava tudo bem com o seu pedido?</label>
+            <input type="radio" name="colaborador_retornou" id="radio_sim" value="Sim" required> Sim
+            <input type="radio" name="colaborador_retornou" id="radio_nao" value="Não" required> Não <br><br>
+
+        
+            <label for="oferecer_algo">Em algum momento da sua visita lhe foi sugerido alguma das opções abaixo?</label>
+            <input type="checkbox" id="bebida" name="oferecer_algo" value="Bebida" onchange="checkboxLimit(this)"> Bebida;<br>
+            <input type="checkbox" id="combo" name="oferecer_algo" value="Combo" onchange="checkboxLimit(this)"> Combo;<br>
+            <input type="checkbox" id="tamanho" name="oferecer_algo" value="Aumentar tamanho da porção" onchange="checkboxLimit(this)"> Aumentar tamanho da porção;<br>
+            <input type="checkbox" id="nada-oferecido" name="oferecer_algo" value="Nada_Oferecido" onchange="checkboxLimit(this)"> Nada oferecido.<br><br>
+              
+
+            <label for="pedido_tempoCorreto">Seus pedidos chegaram dentro do tempo esperado?</label>
+            <input type="radio" name="pedido_tempoCorreto" id="radio_sim" value="Sim" required> Sim
+            <input type="radio" name="pedido_tempoCorreto" id="radio_nao" value="Não" required> Não<br><br>
+            
+
+            <label for="Cremosidade_Acai">Caso tenham consumido açaí, a cremosidade do produto estava de acordo com sua expectativa?</label>
+            <input type="radio" name="Cremosidade_Acai" id="radio_sim" value="Sim" required> Sim
+            <input type="radio" name="Cremosidade_Acai" id="radio_nao" value="Não" required> Não<br><br>
+              
+
+            <label for="expectativa">De acordo com sua expectativa, coo você avalia a qualidade do seu pedido?</label>
+            <input type="radio" name="expectativa" id="radio_mtAbaixo" value="Muito Abaixo" required> Muito abaixo da expectativa;<br>
+            <input type="radio" name="expectativa" id="Mediano" value="Mediano" required> Mediano (Nada acima da média);<br>
+            <input type="radio" name="expectativa" id="Acima" value="Acima" required> Acima da minha expectativa.<br><br>
+
+
+            <label for="local_agradavel">O ambiente estava agradável (estilo musical, volume do som, TV, luzes, temperatura, etc.)?</label>
+            <input type="radio" name="local_agradavel" id="radio_sim" value="Sim" required> Sim
+            <input type="radio" name="local_agradavel" id="radio_nao" value="Não" required> Não<br><br>
+
+
+            <label for="banheiros_limpos">Os banheiros estavam limpos e organizados?</label>
+            <input type="radio" name="banheiros_limpos" id="radio_sim" value="Sim" required> Sim
+            <input type="radio" name="banheiros_limpos" id="radio_nao" value="Não" required> Não
+            <input type="radio" name="banheiros_limpos" id="radio_sim" value="Não utilizei" required>Não utilizei<br><br>
+            
+
+            <label for="restaurante_organizado">O restaurante parecia organizado e bem liberado?</label>
+            <input type="radio" name="restaurante_organizado" id="radio_sim" value="Sim" required> Sim
+            <input type="radio" name="restaurante_organizado" id="radio_nao" value="Não" required> Não<br><br>
+
+
+            <label for="equipe_padronizada">A equipe estava uniformizada e com padrão bem apresentável?</label>
+            <input type="radio" name="equipe_padronizada" id="radio_sim" value="Sim" required> Sim
+            <input type="radio" name="equipe_padronizada" id="radio_nao" value="Não" required> Não<br><br>
+
+
+            <label for="cardapio_intuitivo">A interação com o cardápio digital foi fácil e intuitiva?</label>
+            <input type="radio" name="cardapio_intuitivo" id="radio_sim" value="Sim" required> Sim
+            <input type="radio" name="cardapio_intuitivo" id="radio_nao" value="Não" required> Não
+            <input type="radio" name="cardapio_intuitivo" id="radio_sim" value="Não utilizei" required>Não utilizei<br><br>
+
+
+            <label for="programa_de_pontos">Foi questionado se conhecia o programa de pontos?</label>
+            <input type="radio" name="programa_de_pontos" id="radio_sim" value="Sim" required> Sim
+            <input type="radio" name="programa_de_pontos" id="radio_nao" value="Não" required> Não<br><br>
+
+
+            <label for="despedida_equipe">A equipe se despediu de você na saída com cordialidade e simpatia?</label>
+            <input type="radio" name="despedida_equipe" id="radio_sim" value="Sim" required> Sim
+            <input type="radio" name="despedida_equipe" id="radio_nao" value="Não" required> Não<br><br>
+
+
+            <label for="colaborador_encantou">Algum colaborador te encantou?</label>
+            <input type="radio" name="colaborador_encantou" id="radio_sim" value="Sim" required> Sim
+            <input type="radio" name="colaborador_encantou" id="radio_nao" value="Não" required> Não<br><br>
+
+
+            <label for="colaborador_decepcionou">Algum colaborador te decepcionou?</label>
+            <input type="radio" name="colaborador_decepcionou" id="radio_sim" value="Sim" required> Sim
+            <input type="radio" name="colaborador_decepcionou" id="radio_nao" value="Não" required> Não<br><br>
+
+
+            <label for="anexo">Anexar uma foto do ambiente, produto ou de algo que chamou a sua atenção. (Não é obrigatório).</label>
+            <input type="file"id="anexo" name="anexo"
+            accept="image/png, image/jpeg"> <br><br>
+
+            
+            <p style="text-align: center;"><input type="datetime-local" name="datahora" id="datahora" value="" class="date-time" readonly></p>
+            
+            
+         </fieldset>
+         
+
+          <button type="submit">Enviar</button>
+          <script src="script.js"></script>
+
+          
+        </form>
+
+        <div class="footer">
+            <footer><em>Feito por Doalto Energyfood ©</em></footer>
+        </div>
+
+    </div>
+    
+</body>
+</html>
