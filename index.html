@@ -34,7 +34,7 @@
 
 
             <label for="local">Escolha o estabelecimento que esteve presente:</label>
-            <select id="local" name="local" placeholder="Selecione um estabelecimento">
+            <select id="local" name="local" placeholder="Selecione um estabelecimento" required>
             
              <option value="" disabled selected>Selecione um estabelecimento</option>
              <option value="Alphaville">Alphaville</option>
@@ -57,9 +57,9 @@
             <input type="radio" name="percentual_ocupacao" id="radio_100" value="100" required> 100% (Completamente cheio). <br><br>
 
             <label for="setor">Em qual setor você consumiu?</label>
-            <input type="radio" name="setor" id="radio_acai" value="Açai" required> Açai <br>
-            <input type="radio" name="setor" id="radio_japones" value="Japonês" required> Japonês <br>
-            <input type="radio" name="setor" id="radio_lanchonete" value="Lanchonete" required> Lanchonete <br><br>
+            <input type="checkbox" name="setor" id="radio_acai" value="Açai"> Açai <br>
+            <input type="checkbox" name="setor" id="radio_japones" value="Japonês"> Japonês <br>
+            <input type="checkbox" name="setor" id="radio_lanchonete" value="Lanchonete"> Lanchonete <br><br>
 
 
             <label for="recepcao_eficiente">Foi recepcionado com <strong>cordialidade</strong>  e <strong>rapidez</strong> no seu primerio atendimento seguindo padrão do estabelecimento?</label>
@@ -176,14 +176,11 @@
             <input type="radio" name="colaborador_decepcionou" id="radio_nao" value="Não" required> Não<br><br>
 
 
-            <label for="anexo">Anexar uma foto do ambiente, produto ou de algo que chamou a sua atenção. (Não é obrigatório).</label>
-            <input type="file"id="anexo" name="anexo"
-            accept="image/png, image/jpeg"> <br><br>
+            <label for="Opinião">Deseja expor alguma opinão mais detalhada? Deixe um pequeno comentário. (Não é obrigatório).</label>
+            <textarea name="Opinião" id="opinião" cols="30" rows="5" placeholder="Digite aqui!" autocomplete="off"></textarea>
 
             
             <p style="text-align: center;"><input type="datetime-local" name="datahora" id="datahora" value="" class="date-time" readonly></p>
-            
-            
          </fieldset>
          
 

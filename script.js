@@ -32,25 +32,34 @@ function checkboxLimit(checkbox) {
 // Obtém o elemento de entrada
 const input = document.querySelector("#datahora");
 
-// Obtém a data e hora atuais
-const now = new Date();
+// Função que atualiza a hora
+function updateTime() {
+  // Obtém a data e hora atuais
+  const now = new Date();
 
-// Obtém a diferença em minutos entre o fuso horário local e o UTC
-const timezoneOffset = now.getTimezoneOffset();
+  // Obtém a diferença em minutos entre o fuso horário local e o UTC
+  const timezoneOffset = now.getTimezoneOffset();
 
-// Adiciona a diferença de minutos ao horário atual para obter o horário local
-now.setMinutes(now.getMinutes() + timezoneOffset);
+  // Adiciona a diferença de minutos ao horário atual para obter o horário local
+  now.setMinutes(now.getMinutes() + timezoneOffset);
 
-// Retira 3 horas ao horário atual (fuso)
-now.setHours(now.getHours() - 3);
+  // Retira 3 horas ao horário atual (fuso)
+  now.setHours(now.getHours() - 3);
 
-// Obtém o horário local no formato hh:mm
-const currentHours = now.getHours().toString().padStart(2, "0");
-const currentMinutes = now.getMinutes().toString().padStart(2, "0");
-const currentTimeString = `${currentHours}:${currentMinutes}`;
+  // Obtém o horário local no formato hh:mm
+  const currentHours = now.getHours().toString().padStart(2, "0");
+  const currentMinutes = now.getMinutes().toString().padStart(2, "0");
+  const currentTimeString = `${currentHours}:${currentMinutes}`;
 
-// Obtém a data no formato yyyy-mm-dd
-const currentDateString = now.toISOString().slice(0, 10);
+  // Obtém a data no formato yyyy-mm-dd
+  const currentDateString = now.toISOString().slice(0, 10);
 
-// Atribui a data e hora ao elemento de entrada
-input.value = `${currentDateString}T${currentTimeString}`;
+  // Atribui a data e hora ao elemento de entrada
+  input.value = `${currentDateString}T${currentTimeString}`;
+}
+
+// Atualiza a hora a cada 60 segundos (60000 milissegundos)
+setInterval(updateTime, 1000);
+
+// Executa a função pela primeira vez para definir a hora inicial
+updateTime();
